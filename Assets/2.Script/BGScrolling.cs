@@ -9,7 +9,7 @@ public class BGScrolling : MonoBehaviour
 
     float leftPosY = 0f;            // 왼쪽 경계 y 위치
     float rightPosY = 0f;           // 오른쪽 경계 y 위치
-    float xScreenHalfSize;          // 화면의 가로 반 사이즈
+    public float xScreenHalfSize;          // 화면의 가로 반 사이즈
     float yScreenHalfSize;          // 화면의 세로 반 사이즈
 
     void Start()

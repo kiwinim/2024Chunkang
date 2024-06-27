@@ -1,3 +1,6 @@
+using Unity.VisualScripting.FullSerializer;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : PoolAble
@@ -14,5 +17,9 @@ public class Bullet : PoolAble
         }
 
         this.transform.Translate(Vector3.right * this.Speed * Time.deltaTime);
+    }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        ReleaseObject();
     }
 }

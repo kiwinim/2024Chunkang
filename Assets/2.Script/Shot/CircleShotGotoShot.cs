@@ -6,11 +6,16 @@ namespace Shot
 {
     public class CircleShotGotoShot : MonoBehaviour
     {
+        public static CircleShotGotoShot instance;
         //총알을 생성후 Target에게 날아갈 변수
         public Transform Target;
 
         //발사될 총알 오브젝트
         public GameObject Bullet;
+        private void Awake()
+        {
+            instance = this;
+        }
         private void Start()
         {
             Target = GameObject.FindWithTag("Player").transform;
